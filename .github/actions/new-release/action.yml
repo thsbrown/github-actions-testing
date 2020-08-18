@@ -1,0 +1,15 @@
+name: "Create new release"
+
+description: "Creates a new release, tagging master appropriately and setting various game vars before merge to release branch"
+
+inputs:
+  repo-token:
+      description: "Token with permissions to do repo things"
+      required: true
+  tag-version-string:
+      description: "The string specifying what new version we are releasing"
+      required: true
+
+runs:
+  using: "node12"
+  main: "index.js"
