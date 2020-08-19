@@ -13,29 +13,27 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: "Checkout"
-      uses: actions/checkout@v2
-      with:
-        fetch-depth: 0
-    - name: "Release Action"
-      uses: ./.github/actions/new-release
-      with:
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
-        tag-version-string: ${{ github.event.inputs.release-version }}
-    - name: "Add, Commit And Push"
-      run: |
-        git config --global user.email "releasebot@users.noreply.github.com"
-        git config --local user.name "release bot"
-        git add -A
-        git commit -m "Update Photon Networking code to release number"
-        git push
-    - name: "Merge into release"
-      run: |
-        git fetch
-        git checkout release
-        git merge master --no-ff
-        git push
-    - name: "Add git tag"
-      run: |
-        git tag ${{ github.event.inputs.release-version }}
-        git push --tags
+      - name: "Checkout"
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: "Prepare Files For Release"
+        uses: ./.github/actions/prepare-files-for-release
+        id: prepare-files
+      - name: "Add, Commit And Push Prepared Files"
+        run: |
+          git config --global user.email "releasebot@users.noreply.github.com"
+          git config --local user.name "release bot"
+          git add -A
+          git commit -m "Update Photon Networking code to ${{ steps.prepare-files.outputs.new-networking-version }}"
+          git push
+      - name: "Merge Master Into Release"
+        run: |
+          git fetch
+          git checkout release
+          git merge master --no-ff
+          git push
+      - name: "Tag Release"
+        run: |
+          git tag ${{ github.event.inputs.release-version }}
+          git push --tags
