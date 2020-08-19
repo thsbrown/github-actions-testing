@@ -13,9 +13,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: "Checkout"
     - uses: actions/checkout@v2
     - name: "Release Action"
       uses: ./.github/actions/new-release
       with:
-        repo-token: ${{secrets.GITHUB_TOKEN}}
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
         tag-version-string: ${{ github.event.inputs.release-version }}
+    - name: "Add Commit And Push"
+      run: |
+        git add -A
+        git commit -m "Update Photon Networking code to release number"
+    - name: "Push changes"
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
