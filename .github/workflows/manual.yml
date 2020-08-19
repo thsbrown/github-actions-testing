@@ -28,6 +28,7 @@ jobs:
         git commit -m "Update Photon Networking code to release number"
         git push
     - name: "Merge into release"
+      run: |
         git checkout release
         git merge --no-ff
         git push
