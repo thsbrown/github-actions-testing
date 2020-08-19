@@ -31,7 +31,7 @@ jobs:
       run: |
         git fetch
         git checkout release
-        git merge --no-ff
+        git merge master --no-ff
         git push
     - name: "Add git tag"
       run: |
