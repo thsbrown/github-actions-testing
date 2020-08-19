@@ -27,6 +27,10 @@ jobs:
         git add -A
         git commit -m "Update Photon Networking code to release number"
         git push
+    - name: "Merge into release"
+        git checkout release
+        git merge --no-ff
+        git push
     - name: "Add git tag"
       run: |
         git tag ${{ github.event.inputs.release-version }}
