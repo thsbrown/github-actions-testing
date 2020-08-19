@@ -16,7 +16,7 @@ MonoBehaviour:
     type: 3
   m_Name: NetworkingConfig
   m_EditorClassIdentifier: null
-  photonNetworkingVersion: 136
+  photonNetworkingVersion: 135
   playFabTitleId: ABD9
   playFabStandardMatchmakingQueueName: simple_1_v_1
   matchFoundCountdownToLobby: 3
