@@ -1,0 +1,223 @@
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject:
+    fileID: 0
+  m_PrefabInstance:
+    fileID: 0
+  m_PrefabAsset:
+    fileID: 0
+  m_GameObject:
+    fileID: 0
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script:
+    fileID: 11500000
+    guid: b25adad9315c43f2a6acfc46acf69f6c
+    type: 3
+  m_Name: NetworkingConfig
+  m_EditorClassIdentifier: null
+  photonNetworkingVersion: 125
+  playFabTitleId: ABD9
+  playFabStandardMatchmakingQueueName: simple_1_v_1
+  matchFoundCountdownToLobby: 3
+  lobbyCountdownToCharacterSelect: 3
+  matchmakerAntiSpamTime: 1
+  matchmakerLobbyTimeout: 15
+  matchmakerTicketCheckInterval: 10
+  punEventCodeFindAndSetPlayerRef: 0
+  punEventCodeSyncMatchVariables: 1
+  punEventCodeSyncScreenBounds: 2
+  punEventCodeSyncMatchPlayerData: 3
+  punRoomPropMatchCountdownStartTime: MatchCountdownStartTime
+  punPlayerPropPing: Ping
+  punPlayerPropLives: Lives
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: null
+    ReferencedUnityObjects: []
+    SerializedBytesString: null
+    Prefab:
+      fileID: 0
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+      - Name: clientStateDisplayText
+        Entry: 7
+        Data: 0|System.Collections.Generic.Dictionary`2[[Photon.Realtime.ClientState,
+          PhotonRealtime],[System.String, mscorlib]], mscorlib
+      - Name: comparer
+        Entry: 7
+        Data: 1|System.Collections.Generic.EnumEqualityComparer`1[[Photon.Realtime.ClientState,
+          PhotonRealtime]], mscorlib
+      - Name: null
+        Entry: 12
+        Data: 0
+      - Name: null
+        Entry: 13
+        Data: null
+      - Name: null
+        Entry: 8
+        Data: null
+      - Name: null
+        Entry: 12
+        Data: 4
+      - Name: null
+        Entry: 7
+        Data: null
+      - Name: $k
+        Entry: 3
+        Data: 8
+      - Name: $v
+        Entry: 1
+        Data: Cycling Rolodex
+      - Name: null
+        Entry: 8
+        Data: null
+      - Name: null
+        Entry: 7
+        Data: null
+      - Name: $k
+        Entry: 3
+        Data: 1
+      - Name: $v
+        Entry: 1
+        Data: Grabbing Toys
+      - Name: null
+        Entry: 8
+        Data: null
+      - Name: null
+        Entry: 7
+        Data: null
+      - Name: $k
+        Entry: 3
+        Data: 9
+      - Name: $v
+        Entry: 1
+        Data: Phoning A Friend
+      - Name: null
+        Entry: 8
+        Data: null
+      - Name: null
+        Entry: 7
+        Data: null
+      - Name: $k
+        Entry: 3
+        Data: 6
+      - Name: $v
+        Entry: 1
+        Data: Putting Shoes On
+      - Name: null
+        Entry: 8
+        Data: null
+      - Name: null
+        Entry: 13
+        Data: null
+      - Name: null
+        Entry: 8
+        Data: null
+      - Name: disconnectCauseDisplayText
+        Entry: 7
+        Data: 2|System.Collections.Generic.Dictionary`2[[Photon.Realtime.DisconnectCause,
+          PhotonRealtime],[System.String, mscorlib]], mscorlib
+      - Name: comparer
+        Entry: 7
+        Data: 3|System.Collections.Generic.EnumEqualityComparer`1[[Photon.Realtime.DisconnectCause,
+          PhotonRealtime]], mscorlib
+      - Name: null
+        Entry: 12
+        Data: 0
+      - Name: null
+        Entry: 13
+        Data: null
+      - Name: null
+        Entry: 8
+        Data: null
+      - Name: null
+        Entry: 12
+        Data: 3
+      - Name: null
+        Entry: 7
+        Data: null
+      - Name: $k
+        Entry: 3
+        Data: 1
+      - Name: $v
+        Entry: 1
+        Data: Ensure the server is up and running.
+      - Name: null
+        Entry: 8
+        Data: null
+      - Name: null
+        Entry: 7
+        Data: null
+      - Name: $k
+        Entry: 3
+        Data: 4
+      - Name: $v
+        Entry: 1
+        Data: Ensure you are connected to the internet.
+      - Name: null
+        Entry: 8
+        Data: null
+      - Name: null
+        Entry: 7
+        Data: null
+      - Name: $k
+        Entry: 3
+        Data: 9
+      - Name: $v
+        Entry: 1
+        Data: Your networking ticket has expired, play online to renew it.
+      - Name: null
+        Entry: 8
+        Data: null
+      - Name: null
+        Entry: 13
+        Data: null
+      - Name: null
+        Entry: 8
+        Data: null
+      - Name: matchmakerStateDisplayText
+        Entry: 7
+        Data: 4|System.Collections.Generic.Dictionary`2[[System.String,
+          mscorlib],[System.String, mscorlib]], mscorlib
+      - Name: comparer
+        Entry: 7
+        Data: 5|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
+          mscorlib]], mscorlib
+      - Name: null
+        Entry: 8
+        Data: null
+      - Name: null
+        Entry: 12
+        Data: 2
+      - Name: null
+        Entry: 7
+        Data: null
+      - Name: $k
+        Entry: 1
+        Data: Creating Ticket
+      - Name: $v
+        Entry: 1
+        Data: Creating match ticket...
+      - Name: null
+        Entry: 8
+        Data: null
+      - Name: null
+        Entry: 7
+        Data: null
+      - Name: $k
+        Entry: 1
+        Data: Finding Match
+      - Name: $v
+        Entry: 1
+        Data: Finding match for player...
+      - Name: null
+        Entry: 8
+        Data: null
+      - Name: null
+        Entry: 13
+        Data: null
+      - Name: null
+        Entry: 8
+        Data: null

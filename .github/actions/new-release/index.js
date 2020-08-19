@@ -7,7 +7,7 @@ async function run() {
     const tagVersion = core.getInput("tag-version-string");
     console.log(tagVersion);
 
-    const file = fs.readFileSync('./NetworkingConfig.asset','utf8');
+    const file = fs.readFileSync('./././NetworkingConfig.asset','utf8');
     let document = YAML.parse(file);
     let networkingVersion = document.MonoBehaviour.photonNetworkingVersion;
 
