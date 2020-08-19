@@ -60,7 +60,7 @@ module.exports = require("os");
 /***/ (function(__unusedmodule, __unusedexports, __webpack_require__) {
 
 const core = __webpack_require__(498);
-const github = __webpack_require__(972);
+//const github = require("@actions/github");
 
 async function run() {
 
@@ -425,14 +425,6 @@ function escapeProperty(s) {
 /***/ (function(module) {
 
 module.exports = require("path");
-
-/***/ }),
-
-/***/ 972:
-/***/ (function(module) {
-
-module.exports = eval("require")("@actions/github");
-
 
 /***/ })
 
