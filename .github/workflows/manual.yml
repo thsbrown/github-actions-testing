@@ -33,7 +33,7 @@ jobs:
         ref: "release"
     - name: "Merge release"
       run: |
-        git merge master --no-ff
+        git merge origin/master --no-ff
         git push
     - name: "Add git tag"
       run: |
