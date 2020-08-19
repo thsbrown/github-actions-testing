@@ -28,9 +28,10 @@ jobs:
         git commit -m "Update Photon Networking code to release number"
         git push
     - name: "Merge into release"
+      uses: actions/checkout@v2
+      with:
+        ref: "release"
       run: |
-        git fetch
-        git checkout release
         git merge master --no-ff
         git push
     - name: "Add git tag"
