@@ -1,26 +1,25 @@
 const core = require("@actions/core");
 //const github = require("@actions/github");
+const YAML = require("yaml");
+const fs = require("fs");
 
 async function run() {
+    const tagVersion = core.getInput("tag-version-string");
+    console.log(tagVersion);
 
+    const file = fs.readFileSync('./NetworkingConfig.asset','utf8');
+    let document = YAML.parse(file);
+    let networkingVersion = document.MonoBehaviour.photonNetworkingVersion;
+
+    if(networkingVersion !== undefined){
+        console.log(networkingVersion);
+        networkingVersion++;
+        document.MonoBehaviour.photonNetworkingVersion = networkingVersion;
+        console.log(networkingVersion);
+    }
+    fs.writeFileSync("NetworkingConfig.asset",YAML.stringify(document));
     try {
-        const tagVersion = core.getInput("tag-version-string");
-        console.log(tagVersion);
-        /*
-        const issueTitle = core.getInput("issue-title");
-        const repoToken = core.getInput("repo-token");
-        const joke = core.getInput("joke");
 
-        const octokit = github.getOctokit(repoToken);
-        const context = github.context;
-
-        const newIssue = await octokit.issues.create({
-            repo: context.repo.repo,
-            owner: context.repo.owner,
-            title: issueTitle,
-            body: joke
-        });
-         */
     }catch(exception){
         /*
         core.setFailed(exception.message);
