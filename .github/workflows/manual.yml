@@ -22,9 +22,8 @@ jobs:
         tag-version-string: ${{ github.event.inputs.release-version }}
     - name: "Add Commit And Push"
       run: |
+        git config --global user.email "thsbrown@users.noreply.github.com"
+        git config --local user.name "Thomas"
         git add -A
         git commit -m "Update Photon Networking code to release number"
-    - name: "Push changes"
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        git push
