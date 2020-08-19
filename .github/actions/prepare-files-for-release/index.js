@@ -4,7 +4,8 @@ const fs = require("fs");
 
 async function run() {
     try {
-        const file = fs.readFileSync('./././Assets/_Jump Assets/Config/Resources/NetworkingConfig.asset','utf8');
+        const netConfigFilePath = './././Assets/_Jump Assets/Config/Resources/NetworkingConfig.asset';
+        const file = fs.readFileSync(netConfigFilePath,'utf8');
         let document = YAML.parse(file);
         let networkingVersion = document.MonoBehaviour.photonNetworkingVersion;
 
@@ -13,7 +14,7 @@ async function run() {
             networkingVersion++;
             document.MonoBehaviour.photonNetworkingVersion = networkingVersion;
             console.log("PhotonNetworkVersion: " + oldNetworkingVersion + " -> " + networkingVersion);
-            fs.writeFileSync("NetworkingConfig.asset",YAML.stringify(document));
+            fs.writeFileSync(netConfigFilePath,YAML.stringify(document));
             core.setOutput("new-networking-version",networkingVersion);
             return;
         }
