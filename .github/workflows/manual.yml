@@ -17,4 +17,4 @@ jobs:
       uses: ./.github/actions/new-release
       with:
         repo-token: ${{secrets.GITHUB_TOKEN}}
-        tag-version-string: {{ github.event.inputs.release-version }}
+        tag-version-string: ${{ github.event.inputs.release-version }}
