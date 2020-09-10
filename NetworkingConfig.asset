@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b25adad9315c43f2a6acfc46acf69f6c, type: 3}
   m_Name: NetworkingConfig
   m_EditorClassIdentifier: 
-  photonNetworkingVersion: 115
+  photonNetworkingVersion: 116
   playFabTitleId: ABD9
   playFabStandardMatchmakingQueueName: simple_1_v_1
   matchFoundCountdownToLobby: 3
