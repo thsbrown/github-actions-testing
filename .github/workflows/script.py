@@ -4,7 +4,7 @@ from unityparser import UnityDocument
 project_settings_file = './NetworkingConfig.asset'
 doc = UnityDocument.load_yaml(project_settings_file)
 NetworkConfig = doc.entry
-version = NetworkConfig.MonoBehaviour.photonNetworkingVersion
+version = NetworkConfig.photonNetworkingVersion
 version += 1;
 NetworkConfig.photonNetworkingVersion = version
 doc.dump_yaml()
