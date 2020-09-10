@@ -18,7 +18,7 @@ def run():
     netconfig_monobehaviour_document.photonNetworkingVersion = version
     # see https://docs.github.com/en/actions/reference/workflow-commands-for-github-actions#setting-an-output-parameter
     print(f"::set-output name=new-networking-version::{version}")
-    # unity_document.dump_yaml()
+    unity_document.dump_yaml()
     return
 
 
